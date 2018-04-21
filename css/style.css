@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html, body{
+height: 100%;
+width: 100%;
+font-family: 'Lato', sans-serif, 'Roboto', sans-serif;
+}
+
+h1{
+    padding-top:25px;
+    font-weight: 900;
+}
+
+.task-form{
+    padding-top:25px;
+    text-align: center;
+}
