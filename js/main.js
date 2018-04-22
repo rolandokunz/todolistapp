@@ -1,3 +1,8 @@
+/* Author: Rolando Kunz F.
+   https://www.linkedin.com/in/rolandokunz/
+   Copyrights 2018
+*/
+
 function get_todolist(){
 
     var todolist = [];
