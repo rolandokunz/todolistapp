@@ -28,7 +28,6 @@ function add_newtask(){
 
     var newtask = document.getElementById('newtask').value;
     var priority = document.getElementById('priority').value;
-
     var todolist = get_todolist();
     var prioritylist = get_prioritylist();
 
@@ -82,7 +81,7 @@ function show(){
     for(var i=0; i<todolist.length; i++){
     
         html += '<tr  id=" ' + i + '" >'
-        + '<td>' + todolist[i] + '</td>'
+        + '<td style="width:60%;">' + todolist[i] + '</td>'
         + '<td>' + prioritylist[i] + '</td>'
         + '<td> <span class="remove" id=" ' + i + '"> </span>'
         +'</td></tr>';
@@ -131,7 +130,16 @@ function delete_all(){
  
 }
 
+function fullDate(){
+    var date = new Date();
+    return date.toDateString();
+}
+
 document.getElementById('add').addEventListener('click', add_newtask);
 document.getElementById('deleteall').addEventListener('click', delete_all);
+
+
+document.getElementById('today-date').innerHTML = fullDate();
+
 show();
 

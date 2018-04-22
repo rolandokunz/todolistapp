@@ -23,7 +23,12 @@
 
     <div class="container">
         <div class="row">
-            <div class="eight columns">
+            <div class="twelve columns">
+                <h1>Date: <span id="today-date"></span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
                 <label for="newtask">
                     ADD A NEW TASK
                 </label>
@@ -40,16 +45,17 @@
                     <option value="important">Important</option>
                 </select>
             </div>
-
-            <div class="row">
+            <div class="two columns">
+                <label for="addtask" class="addlabel">ADD</label>
                 <input class="button-primary" type="submit" value="Add to the list" id="add">
             </div>
+        </div>
             <div class="row">
                 <table class="u-full-width">
                     <thead>
                         <tr>
-                            <th>THINGS TO DO (<span id="todo-counter"></span>)</th>
-                            <th>PRIOTIRY</th>
+                            <th>TO DO (<span id="todo-counter"></span>)</th>
+                            <th>PRIORITY</th>
                             <th>ACTIONS</th>
                         </tr>
                     </thead>
@@ -57,34 +63,42 @@
                     </tbody>
                 </table>
             </div>
-            <div class="row">
+            <div class="row" id="counters">
+                <div class="four columns"> 
+                    <div class="priority-box red">
+                        <span id="urgent-counter" class="counter"></span>
+                        <span class="priority-title">
+                        URGENT
+                        </span>
+                    </div>
+                </div>    
+                <div class="four columns"> 
+                    <div class="priority-box orange">
+                        <span id="important-counter" class="counter"></span>
+                        <span class="priority-title">
+                        IMPORTANT
+                        </span>
+                    </div>
+                </div>    
                 <div class="four columns">
-                Urgent: <span id="urgent-counter"></span>
+                    <div class="priority-box yellow">    
+                        <span id="normal-counter" class="counter"></span>
+                        <span class="priority-title">
+                        NORMAL
+                        </span>
+                    </div>
                 </div>
-                <div class="four columns">
-                    Important: <span id="important-counter"></span>
+            </div>    
+
+            <div class="row" id="extra-actions">
+                <div class="six columns">
+                    <button id="print" onclick="window.print();"><img src="img/ui/print.png" class="printer" alt=""></button>
                 </div>
-                <div class="four columns">
-                    Normal: <span id="normal-counter"></span>
-                </div>
+                <div class="six columns">
+                    <button id="deleteall" class="deleteall">DELETE ALL</button>
+                </div>     
             </div>
 
-
-            <div class="row">
-                <div class="row">
-                    <input id="deleteall" class="deleteall" type="submit" value="Delete All" id="deleteall">
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="row" id="welcome-info">
-        <h6>
-            <strong>How it works?</strong>
-            <br/> Data is saved in your browser cache. You will see it until you clear your cache
-        </h6>
     </div>
 
     <!-- JS MAIN FUNCTIONS -->

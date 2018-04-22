@@ -10,17 +10,6 @@ font-family: 'Lato', sans-serif, 'Roboto', sans-serif;
 overflow-x: hidden;
 }
 
-.container{
-    height: 90%;
-}
-
-#welcome-info{
-    height: 10%;
-    width: 100%;
-    text-align: center;
-    color:#000;
-}
-
 h1{
     padding-top:25px;
     font-weight: 900;
@@ -29,6 +18,10 @@ h1{
 .task-form{
     padding-top:25px;
     text-align: center;
+}
+
+.addlabel{
+    visibility: hidden;
 }
 
 tbody{
@@ -49,28 +42,94 @@ tbody{
     content: url(../img/ui/deletehover.png);
 }
 
-.done{
-    content: url(../img/ui/check.png);
-    width: 25px;
-    height: auto;
-    cursor: pointer;
+#counters > div{
     text-align: center;
-    margin:0 20px;
+    padding:5px;
+}
+
+
+.priority-box{
+text-align: center;
+color:#ffffff;
+padding:15px;
+border-radius: 5px;
+}
+
+.red{
+    background-color:#BC2C1A;
+}
+
+.orange{
+    background-color:#DACC3E;
+}
+
+.yellow{
+    background-color: #7FB7BE;
+}
+
+.priority-title{
+    width: 75%;
+    font-weight: 500;
+    padding:0 10px;
+    }
+
+.counter{
+    width: 25%;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding:5px 10px;
+    background-color: white;
+    color:#000;
+}
+
+#extra-actions{
+    text-align: center;
+}
+
+#deleteall, #print{
+    margin-top:5%;
+    color:#000;
+    border:1px solid;
+    text-align: center;
+    min-width: 150px;
 }
 
 #deleteall{
-    margin-top:20%;
-    color:#000;
-    border:1px solid;
-    display: none;
+    display:none;
 }
 
 #deleteall:hover{
-    background-color: red;
+    background-color: #000;
     color:#fff;
-    border:0;
+    border:1px solid #000;
+}
+
+#print:hover{
+    background-color:#000;
+    border:1px solid #000;
+}
+
+.printer {
+    width: 22px;
+    padding:5px;
+}
+
+#print:hover > .printer{
+    filter:invert(100%);
 }
 
 .lightblue{
     color:lightblue;
 }
+
+@media print {
+   button,button[id="deleteall"], input,input[type="submit"], select, label{
+       display:none;
+       visibility: hidden;
+   }
+
+   #deleteall{
+       display: none;
+   }
+} 
