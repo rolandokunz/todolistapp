@@ -8,6 +8,9 @@ height: 100%;
 width: 100%;
 font-family: 'Lato', sans-serif, 'Roboto', sans-serif;
 overflow-x: hidden;
+background:url(https://motionarray.imgix.net/preview-33509CFka6iC1IY_0000.jpg?w=750&fit=max&q=60&auto=format);
+box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.95);
+background-size: cover;
 }
 
 h1{
@@ -23,6 +26,19 @@ h1{
 .addlabel{
     visibility: hidden;
 }
+
+.button-green{
+    background-color: #0EAD69;
+    border: #0EAD69;
+    color:#fff;
+}
+
+.button-green:hover{
+    background-color: #7FB7BE;
+    border: #7FB7BE;
+    color:#fff;
+}
+
 
 tbody{
   
@@ -48,6 +64,10 @@ tbody{
 }
 
 
+#normal, #important, #urgent{
+    display: none;
+}
+
 .priority-box{
 text-align: center;
 color:#ffffff;
@@ -71,20 +91,25 @@ border-radius: 5px;
     width: 75%;
     font-weight: 500;
     padding:0 10px;
+    font-weight: bold;
     }
 
 .counter{
     width: 25%;
     min-width: 30px;
+    min-height: 30px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 30px;
+    border:2px dotted rgb(51, 51, 51);
     padding:5px 10px;
     background-color: white;
     color:#000;
+    font-weight: bold;
 }
 
 #extra-actions{
     text-align: center;
+    display:none;
 }
 
 #deleteall, #print{
@@ -93,10 +118,6 @@ border-radius: 5px;
     border:1px solid;
     text-align: center;
     min-width: 150px;
-}
-
-#deleteall{
-    display:none;
 }
 
 #deleteall:hover{
@@ -130,6 +151,10 @@ border-radius: 5px;
    }
 
    #deleteall{
+       display: none;
+   }
+
+   .remove, .remove-header{
        display: none;
    }
 } 

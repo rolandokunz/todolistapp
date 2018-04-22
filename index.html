@@ -47,7 +47,7 @@
             </div>
             <div class="two columns">
                 <label for="addtask" class="addlabel">ADD</label>
-                <input class="button-primary" type="submit" value="Add to the list" id="add">
+                <button class="button-green" value="Add to the list" id="add">ADD TO THE LIST</button>
             </div>
         </div>
             <div class="row">
@@ -56,7 +56,7 @@
                         <tr>
                             <th>TO DO (<span id="todo-counter"></span>)</th>
                             <th>PRIORITY</th>
-                            <th>ACTIONS</th>
+                            <th class="remove-header">ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody id="todolist">
@@ -65,7 +65,7 @@
             </div>
             <div class="row" id="counters">
                 <div class="four columns"> 
-                    <div class="priority-box red">
+                    <div class="priority-box red" id="urgent">
                         <span id="urgent-counter" class="counter"></span>
                         <span class="priority-title">
                         URGENT
@@ -73,7 +73,7 @@
                     </div>
                 </div>    
                 <div class="four columns"> 
-                    <div class="priority-box orange">
+                    <div class="priority-box orange" id="important">
                         <span id="important-counter" class="counter"></span>
                         <span class="priority-title">
                         IMPORTANT
@@ -81,7 +81,7 @@
                     </div>
                 </div>    
                 <div class="four columns">
-                    <div class="priority-box yellow">    
+                    <div class="priority-box yellow" id="normal">    
                         <span id="normal-counter" class="counter"></span>
                         <span class="priority-title">
                         NORMAL

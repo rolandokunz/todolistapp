@@ -111,10 +111,26 @@ function show(){
     document.getElementById('important-counter').innerHTML = importantCounter;
     document.getElementById('urgent-counter').innerHTML = urgentCounter;
 
-   if(todolist.length>=2){
-    document.getElementById('deleteall').style.display="inline";  
+    if(normalCounter>0){
+        document.getElementById('normal').style.display="block";
+    } else{
+        document.getElementById('normal').style.display="none";
+    }
+    if(importantCounter>0){
+        document.getElementById('important').style.display="block";
+    } else{
+        document.getElementById('important').style.display="none";
+    }
+    if(urgentCounter>0){
+        document.getElementById('urgent').style.display="block";
+    } else{
+        document.getElementById('urgent').style.display="none";
+    }
+
+   if(todolist.length>=1){
+    document.getElementById('extra-actions').style.display="block";
    } else {
-    document.getElementById('deleteall').style.display="none";  
+    document.getElementById('extra-actions').style.display="none";  
    }
 
 }
