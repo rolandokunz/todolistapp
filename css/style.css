@@ -152,6 +152,34 @@ border-radius: 5px;
     color:lightblue;
 }
 
+#welcome-info{
+    padding:5px 10px 0 10px;
+    background-color:rgb(68, 217, 230,0.6);
+    color:#000;
+    border-radius: 5px;
+}
+
+#welcome-info .notes{
+    padding:5% 10px;
+}
+
+#ul >li{
+ 
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    background-color: #000;
+    color:#fff;
+}
+
+footer > h6{
+font-size:0.8em;
+}
+
+
 @media (max-width: 550px) {
     .six.columns                    { width: 48%;            }
 
@@ -209,6 +237,11 @@ border-radius: 5px;
             width: 100%;
             font-size: 0.70em;
         }
+
+        #welcome-info{
+     font-size: 70%;
+        }
+        
         
 
 }
@@ -273,5 +306,10 @@ border-radius: 5px;
    .remove, .remove-header{
        display: none;
    }
+
+   footer{
+   display:none;
+}
+
 }
 

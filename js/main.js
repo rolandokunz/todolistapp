@@ -129,9 +129,11 @@ function show(){
 
    if(todolist.length>=1){
     document.getElementById('extra-actions').style.display="block";
+    document.getElementById('welcome-info').style.display="none";
    } else {
     document.getElementById('extra-actions').style.display="none";  
-   }
+    document.getElementById('welcome-info').style.display="block";
+    }
 
 }
 

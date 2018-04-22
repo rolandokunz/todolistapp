@@ -31,17 +31,17 @@
                     <span id="today-date"></span>
                 </h1>
             </div>
-        </div>    
-            <div class="row" id="extra-actions">
-                <div class="six columns">
-                    <button id="print" onclick="window.print();">
-                        <img src="img/ui/print.png" class="printer" alt="">
-                    </button>
-                </div>
-                <div class="six columns">
-                    <button id="deleteall" class="deleteall">DELETE ALL</button>
-                </div>
+        </div>
+        <div class="row" id="extra-actions">
+            <div class="six columns">
+                <button id="print" onclick="window.print();">
+                    <img src="img/ui/print.png" class="printer" alt="">
+                </button>
             </div>
+            <div class="six columns">
+                <button id="deleteall" class="deleteall">DELETE ALL</button>
+            </div>
+        </div>
         <div class="row">
             <div class="seven columns">
                 <label for="newtask">
@@ -50,7 +50,7 @@
                 <input class="u-full-width" type="text" placeholder="A new task todo" id="newtask">
             </div>
 
-            <div class="three columns">
+            <div class="two columns">
                 <label for="priority">
                     SELECT PRIORITY
                 </label>
@@ -60,7 +60,7 @@
                     <option value="important">Important</option>
                 </select>
             </div>
-            <div class="two columns">
+            <div class="three columns">
                 <label for="addtask" class="addlabel">ADD</label>
                 <button class="button-green" value="Add to the list" id="add">ADD TO THE LIST</button>
             </div>
@@ -109,9 +109,34 @@
 
     <div class="container" id="welcome-info">
 
-        
+        <div class="row">
+            <div class="seven columns">
+                <h2>Welcome!</h2>
+
+                <h5>
+                    <strong> You can use this tool for FREE!</strong>
+                </h5>
+
+                <ul>
+                    <li>Enter in the form a TO-DO you want to add to your list.</li>
+                    <li>Then, select a priority level for that thing.</li>
+                    <li>Click the "ADD TO THE LIST" button.</li>
+                </ul>
+            </div>
+            <div class="five columns notes">
+                <strong>NOTES</strong>
+                <br/>All data will be saved in your web-browser. While you don`t clear your cache you will be able to see your
+                data.
+                <br/>You are also able to print your list and have a hard-copy or a PDF of it.
+                <strong>Please! Just print your list if you really need it.</strong>
+            </div>
+        </div>
 
     </div>
+
+    <footer>
+    <h6>Copyright 2018 Asimpleplanner.com / A project developed by RKunz</h6>
+    </footer>
 
     <!-- JS MAIN FUNCTIONS -->
     <script src="js/main.js"></script>
