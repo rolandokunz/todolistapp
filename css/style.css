@@ -9,8 +9,18 @@ width: 100%;
 font-family: 'Lato', sans-serif, 'Roboto', sans-serif;
 overflow-x: hidden;
 background:url(https://motionarray.imgix.net/preview-33509CFka6iC1IY_0000.jpg?w=750&fit=max&q=60&auto=format);
-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.95);
+box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.9);
 background-size: cover;
+}
+
+#logo{
+    margin:10px 0px;
+    float:left;
+}
+
+#logo > img{
+    width: 75%;
+    height:auto;
 }
 
 h1{
@@ -34,11 +44,10 @@ h1{
 }
 
 .button-green:hover{
-    background-color: #7FB7BE;
-    border: #7FB7BE;
+    background-color: #000;
+    border: #000;
     color:#fff;
 }
-
 
 tbody{
   
@@ -113,7 +122,6 @@ border-radius: 5px;
 }
 
 #deleteall, #print{
-    margin-top:5%;
     color:#000;
     border:1px solid;
     text-align: center;
@@ -144,11 +152,119 @@ border-radius: 5px;
     color:lightblue;
 }
 
+@media (max-width: 550px) {
+    .six.columns                    { width: 48%;            }
+
+        h1{
+            padding-top:5px;
+            font-size: 3rem;
+        }
+
+        
+        #logo{
+            margin:10px 0px 0px 0px;
+            float:left;
+        }
+
+        #logo > img{
+            width: 50%;
+            height:auto;
+        }
+
+        .date{
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        #today-date{
+           display: block;
+           width:100%;
+        }
+
+        .addlabel{
+            display: none ;
+        }
+
+        #deleteall, #print{
+            color:#000;
+            border:1px solid;
+            text-align: center;
+            min-width: 125px;
+        }
+
+        #add{
+            width: 100%;
+        }
+
+        #counters > div{
+            width: 32%;
+            text-align: center;
+            padding:2px;
+        }
+
+        .priority-title{
+            display: block;
+            padding:0;
+            padding-top:10px;
+            width: 100%;
+            font-size: 0.70em;
+        }
+        
+
+}
+
+@media (max-width: 800px) and (orientation:landscape) {
+
+    .date{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #today-date{
+        display: block;
+       width:100%;
+    }
+
+    .seven.columns{
+        width: 100%;
+    }
+
+    .three.columns, .two.columns{
+        width: 45%;
+    }
+
+    .priority-title{
+        display: block;
+        padding:0;
+        padding-top:10px;
+        width: 100%;
+        font-size: 0.75em;
+    }
+
+
+}
+
+
 @media print {
+
+    html{
+        height: auto;;
+    }
+
    button,button[id="deleteall"], input,input[type="submit"], select, label{
        display:none;
        visibility: hidden;
    }
+
+   #logo{
+ 
+    }
+
+    #logo > img{
+        width:50%;
+        height:auto;
+    }
+    
 
    #deleteall{
        display: none;
@@ -157,4 +273,5 @@ border-radius: 5px;
    .remove, .remove-header{
        display: none;
    }
-} 
+}
+

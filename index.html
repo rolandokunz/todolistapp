@@ -22,20 +22,35 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="twelve columns">
-                <h1>Date: <span id="today-date"></span></h1>
-            </div>
+        <div class="row" id="logo">
+            <img src="img/logo-asimpleplanner.png" alt="">
         </div>
         <div class="row">
-            <div class="six columns">
+            <div class="twelve columns date">
+                <h1>Date:
+                    <span id="today-date"></span>
+                </h1>
+            </div>
+        </div>    
+            <div class="row" id="extra-actions">
+                <div class="six columns">
+                    <button id="print" onclick="window.print();">
+                        <img src="img/ui/print.png" class="printer" alt="">
+                    </button>
+                </div>
+                <div class="six columns">
+                    <button id="deleteall" class="deleteall">DELETE ALL</button>
+                </div>
+            </div>
+        <div class="row">
+            <div class="seven columns">
                 <label for="newtask">
                     ADD A NEW TASK
                 </label>
                 <input class="u-full-width" type="text" placeholder="A new task todo" id="newtask">
             </div>
 
-            <div class="four columns">
+            <div class="three columns">
                 <label for="priority">
                     SELECT PRIORITY
                 </label>
@@ -50,54 +65,51 @@
                 <button class="button-green" value="Add to the list" id="add">ADD TO THE LIST</button>
             </div>
         </div>
-            <div class="row">
-                <table class="u-full-width">
-                    <thead>
-                        <tr>
-                            <th>TO DO (<span id="todo-counter"></span>)</th>
-                            <th>PRIORITY</th>
-                            <th class="remove-header">ACTIONS</th>
-                        </tr>
-                    </thead>
-                    <tbody id="todolist">
-                    </tbody>
-                </table>
-            </div>
-            <div class="row" id="counters">
-                <div class="four columns"> 
-                    <div class="priority-box red" id="urgent">
-                        <span id="urgent-counter" class="counter"></span>
-                        <span class="priority-title">
+        <div class="row">
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>TO DO (
+                            <span id="todo-counter"></span>)</th>
+                        <th>PRIORITY</th>
+                        <th class="remove-header">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="todolist">
+                </tbody>
+            </table>
+        </div>
+        <div class="row" id="counters">
+            <div class="four columns">
+                <div class="priority-box red" id="urgent">
+                    <span id="urgent-counter" class="counter"></span>
+                    <span class="priority-title">
                         URGENT
-                        </span>
-                    </div>
-                </div>    
-                <div class="four columns"> 
-                    <div class="priority-box orange" id="important">
-                        <span id="important-counter" class="counter"></span>
-                        <span class="priority-title">
-                        IMPORTANT
-                        </span>
-                    </div>
-                </div>    
-                <div class="four columns">
-                    <div class="priority-box yellow" id="normal">    
-                        <span id="normal-counter" class="counter"></span>
-                        <span class="priority-title">
-                        NORMAL
-                        </span>
-                    </div>
+                    </span>
                 </div>
-            </div>    
-
-            <div class="row" id="extra-actions">
-                <div class="six columns">
-                    <button id="print" onclick="window.print();"><img src="img/ui/print.png" class="printer" alt=""></button>
-                </div>
-                <div class="six columns">
-                    <button id="deleteall" class="deleteall">DELETE ALL</button>
-                </div>     
             </div>
+            <div class="four columns">
+                <div class="priority-box orange" id="important">
+                    <span id="important-counter" class="counter"></span>
+                    <span class="priority-title">
+                        IMPORTANT
+                    </span>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="priority-box yellow" id="normal">
+                    <span id="normal-counter" class="counter"></span>
+                    <span class="priority-title">
+                        NORMAL
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="welcome-info">
+
+        
 
     </div>
 

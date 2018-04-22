@@ -148,7 +148,7 @@ function delete_all(){
 
 function fullDate(){
     var date = new Date();
-    return date.toDateString();
+    return date.toLocaleDateString();
 }
 
 document.getElementById('add').addEventListener('click', add_newtask);
