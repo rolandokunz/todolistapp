@@ -7,6 +7,18 @@ html, body{
 height: 100%;
 width: 100%;
 font-family: 'Lato', sans-serif, 'Roboto', sans-serif;
+overflow-x: hidden;
+}
+
+.container{
+    height: 90%;
+}
+
+#welcome-info{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    color:#000;
 }
 
 h1{
@@ -17,4 +29,48 @@ h1{
 .task-form{
     padding-top:25px;
     text-align: center;
+}
+
+tbody{
+  
+    vertical-align: middle;
+}
+
+.remove{
+    content: url(../img/ui/delete.png);
+    width:30px;
+    height: auto;
+    cursor: pointer;
+    text-align: center;
+    margin:0 auto;
+}
+
+.remove:hover{
+    content: url(../img/ui/deletehover.png);
+}
+
+.done{
+    content: url(../img/ui/check.png);
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    text-align: center;
+    margin:0 20px;
+}
+
+#deleteall{
+    margin-top:20%;
+    color:#000;
+    border:1px solid;
+    display: none;
+}
+
+#deleteall:hover{
+    background-color: red;
+    color:#fff;
+    border:0;
+}
+
+.lightblue{
+    color:lightblue;
 }

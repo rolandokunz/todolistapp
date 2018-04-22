@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +10,86 @@
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/skeleton.css">
 
-
     <!-- CSS CUSTOM STYLE -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- JS MAIN FUNCTIONS -->
-    <link rel="stylesheet" href="js/main.js">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Roboto:400,500,700,900" rel="stylesheet">
 
     <title>TODO LIST WEBAPP</title>
 </head>
+
 <body>
 
     <div class="container">
         <div class="row">
-            <div class="two columns">
-                <h1>AN EASY TO USE TODO LIST</h1>
+            <div class="eight columns">
+                <label for="newtask">
+                    ADD A NEW TASK
+                </label>
+                <input class="u-full-width" type="text" placeholder="A new task todo" id="newtask">
             </div>
-            <div class="offset-by-two columns eight columns task-form">
-                <div class="row">
-                    <label for="newtask">¡Add here your tasks to the list!</label>
-                    <input class="u-full-width" type="text" placeholder="A new task todo" id="newtask">
+
+            <div class="four columns">
+                <label for="priority">
+                    SELECT PRIORITY
+                </label>
+                <select class="u-full-width" id="priority">
+                    <option value="normal">Normal</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="important">Important</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <input class="button-primary" type="submit" value="Add to the list" id="add">
+            </div>
+            <div class="row">
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>THINGS TO DO (<span id="todo-counter"></span>)</th>
+                            <th>PRIOTIRY</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todolist">
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                Urgent: <span id="urgent-counter"></span>
                 </div>
+                <div class="four columns">
+                    Important: <span id="important-counter"></span>
+                </div>
+                <div class="four columns">
+                    Normal: <span id="normal-counter"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
                 <div class="row">
-                    <input class="button-primary" type="submit" value="Add to the list">
+                    <input id="deleteall" class="deleteall" type="submit" value="Delete All" id="deleteall">
                 </div>
             </div>
         </div>
 
+
     </div>
-    
+
+    <div class="row" id="welcome-info">
+        <h6>
+            <strong>How it works?</strong>
+            <br/> Data is saved in your browser cache. You will see it until you clear your cache
+        </h6>
+    </div>
+
+    <!-- JS MAIN FUNCTIONS -->
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
